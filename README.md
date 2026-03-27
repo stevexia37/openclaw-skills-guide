@@ -283,11 +283,27 @@
 
 ---
 
+## 🏆 #1 社区技能资源（强烈推荐）
+
+> **VoltAgent/awesome-openclaw-skills** - 42.4k stars，5,211 个精选技能！
+
+| 指标 | 数据 |
+|------|------|
+| Stars | **42.4k** ⭐ |
+| 技能数量 | **5,211 个** |
+| 月访问量 | **1M+** |
+| 分类 | **24 个详细分类** |
+
+**链接**：👉 [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)
+
+---
+
 ## 📞 求助渠道
 
 | 渠道 | 说明 | 链接 |
 |------|------|------|
 | **问答工具** | 下载即用 | [Releases](https://github.com/stevexia37/openclaw-skills-guide/releases) |
+| **社区技能库** | 5400+ 精选技能 | [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) |
 | **GitHub Issues** | 提交问题 | [提问](https://github.com/stevexia37/openclaw-skills-guide/issues) |
 | **知识库搜索** | 在线搜索 | [查看](./knowledge/faq.jsonl) |
 | **官方网站** | 官方支持 | https://openclaw.ai |
