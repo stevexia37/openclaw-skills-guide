@@ -10,6 +10,8 @@
 
 **「下载一个文件，就能问问题」**
 
+![OpenClaw 技能指南全景图](./assets/openclaw-guide-infographic.svg)
+
 ---
 
 ![GitHub release](https://img.shields.io/github/v/release/stevexia37/openclaw-skills-guide?include_prereleases&style=flat-square)
