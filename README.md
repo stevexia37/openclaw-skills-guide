@@ -10,7 +10,7 @@
 
 **「下载一个文件，就能问问题」**
 
-![OpenClaw 技能指南全景图](./assets/openclaw-guide-infographic.svg)
+![OpenClaw 技能指南思维导图](./assets/openclaw-guide-mindmap.png)
 
 ---
 
