@@ -2,225 +2,200 @@
 
 <div align="center">
 
-**全网最详细、最友好的 OpenClaw 百科全书**
+**OpenClaw 小白宝典：从部署到精通，还有随身的问答助手**
 
-[![GitHub stars](https://img.shields.io/github/stars/stevexia37/openclaw-skills-guide?style=social)](https://github.com/stevexia37/openclaw-skills-guide)
-[![文档数量](https://img.shields.io/badge/文档-20+-blue)](https://github.com/stevexia37/openclaw-skills-guide)
-[![更新频率](https://img.shields.io/badge/更新-每日-green)](https://github.com/stevexia37/openclaw-skills-guide)
-[![学习路径](https://img.shields.io/badge/学习路径-完整-yellow)](./LEARNING-PATH.md)
+![GitHub release](https://img.shields.io/github/v/release/stevexia37/openclaw-skills-guide?include_prereleases)
+![GitHub stars](https://img.shields.io/github/stars/stevexia37/openclaw-skills-guide?style=social)
+![文档数量](https://img.shields.io/badge/问答库-24+-blue)
+![更新频率](https://img.shields.io/badge/更新-持续-green)
 
-**从零到精通，让每个人都能轻松使用 AI 助手**
+**像查字典一样解决部署问题 | 下载一个文件，就能问问题**
 
 </div>
 
 ---
 
-## 🎯 一句话介绍
+## ✨ 特色亮点
 
-**OpenClaw** = **本地运行 + 免费无限 + 真正能干** 的 AI 助手
-
----
-
-## ✨ 五大亮点
-
-| 亮点 | 说明 |
+| 特色 | 说明 |
 |------|------|
-| 🔒 **隐私安全** | 数据在你电脑里，不上云 |
-| 💰 **完全免费** | 无订阅费，无限制 |
-| 🌍 **无需翻墙** | 国内直接使用 |
-| 💪 **真正能干** | 操作文件、浏览器、定时任务 |
-| 🛠️ **技能丰富** | 30,000+ 技能库 |
+| 🚀 **零基础友好** | 每一步都有详细说明，小白也能轻松上手 |
+| 💡 **内置 24+ 常见问题** | 覆盖安装、配置、技能、故障等场景 |
+| 🖥️ **免安装问答工具** | 下载即可运行，无需 Python 环境 |
+| 🔄 **持续更新** | 社区驱动，欢迎贡献问题与答案 |
+| 📚 **完整学习路径** | 从入门到进阶，循序渐进 |
 
 ---
 
-## 🆚 为什么选 OpenClaw？
+## 🚀 快速开始
 
-| 对比项 | ChatGPT | 文心一言 | OpenClaw |
-|--------|---------|----------|----------|
-| 价格 | $20/月 | 部分收费 | ✅ **免费** |
-| 数据安全 | 上传云端 | 上传云端 | ✅ **本地** |
-| 操作电脑 | ❌ 只能聊天 | ❌ | ✅ **可以** |
-| 需翻墙 | ✅ 需要 | ❌ | ✅ **不需要** |
-| 技能扩展 | 插件有限 | 无 | ✅ **30,000+** |
+### 方式一：直接阅读文档
+
+👉 [开始学习：环境准备](./docs/0-1/01-env-prepare.md)
+
+适合：想详细了解 OpenClaw 的用户
 
 ---
 
-## 📚 学习路径
+### 方式二：下载问答工具
 
-### 📖 完整路线图
+👉 [前往 Releases 下载](https://github.com/stevexia37/openclaw-skills-guide/releases)
 
-```
-01-getting-started/     入门阶段（1-2天）
-├── 01-introduction     → 认识 OpenClaw
-├── 02-installation     → 安装配置
-└── 03-quick-start      → 快速上手
+适合：遇到问题想快速查找答案的用户
 
-02-features/            核心功能（3-5天）
-├── 01-overview         → 功能概览
-├── 02-file-management  → 文件操作
-├── 03-schedule         → 日程管理
-└── 04-automation       → 自动化
+**使用方法：**
 
-03-skills/              技能系统（2-3天）
-├── 01-guide            → 技能指南
-├── 02-install          → 安装技能
-└── 03-popular          → 热门技能
+```bash
+# macOS/Linux
+chmod +x qa_tool_macos
+./qa_tool_macos
 
-04-practical-cases/     实战案例（5-7天）
-├── 01-personal         → 个人效率
-├── 02-work             → 工作场景
-├── 03-development      → 开发者场景
-└── 04-life             → 生活场景
-
-05-advanced/            进阶内容（可选）
-├── 01-development      → 开发技能
-├── 02-custom-models    → 自定义模型
-├── 03-api              → API 集成
-└── 04-best-practices   → 最佳实践
-
-appendix/               附录参考
-├── A-faq               → 常见问题
-├── B-commands          → 命令参考
-├── C-skills-catalog    → 技能目录
-└── D-best-practices    → 最佳实践
+# Windows
+双击 qa_tool_windows.exe
 ```
 
-👉 [完整学习路径](./LEARNING-PATH.md)
+**问答示例：**
+
+```
+请输入问题:
+> 安装失败怎么办
+
+📊 匹配度: 85%
+❓ 问题: 安装时提示「已损坏，无法打开」怎么办？
+💡 答案:
+这是 macOS 的安全机制导致的。
+
+解决方法：
+1. 打开终端
+2. 执行命令：xattr -cr /Applications/OpenClaw.app
+3. 重新打开应用
+```
 
 ---
 
-## 🚀 5分钟上手
+## 📚 文档目录
 
-### 第一步：安装
+### 0-1 入门教程
 
-| 系统 | 方法 |
+| 文档 | 内容 |
 |------|------|
-| macOS | 官网下载 .dmg → 双击安装 |
-| Windows | 官网下载 .exe → 双击安装 |
-| Linux | AppImage → `chmod +x && ./` |
+| [环境准备](./docs/0-1/01-env-prepare.md) | 如何检查系统是否满足要求？ |
+| [安装教程](./docs/0-1/02-install.md) | 如何安装 OpenClaw？ |
+| [配对账号](./docs/0-1/03-config.md) | 如何配对账号并开始使用？ |
+| [首次运行](./docs/0-1/04-first-run.md) | 第一次使用 OpenClaw |
 
-👉 [详细安装教程](./docs/01-getting-started/02-installation.md)（含报错解决）
+### 1-N 进阶运维
 
-### 第二步：配对
+| 文档 | 内容 |
+|------|------|
+| [安全设置](./docs/1-n/01-security.md) | 如何保护隐私和数据安全？ |
+| [备份恢复](./docs/1-n/02-backup.md) | 如何备份和恢复数据？ |
+| [性能监控](./docs/1-n/03-monitor.md) | 如何监控 OpenClaw 运行状态？ |
+| [扩展技能](./docs/1-n/04-scale.md) | 如何安装更多技能？ |
 
-打开 OpenClaw → 扫二维码 → 完成！
+### 技能相关
 
-### 第三步：对话
-
-```
-你: 帮我整理下载文件夹
-OpenClaw: 已整理完成！
-  - 图片 → 图片文件夹 (23个)
-  - 文档 → 文档文件夹 (15个)
-```
+| 文档 | 内容 |
+|------|------|
+| [推荐技能](./docs/plugins/recommended.md) | 新手必备技能推荐 |
 
 ---
 
-## 📊 文档统计
+## 💬 问答知识库
 
-| 分类 | 文档数 | 学习时间 |
+### 按主题浏览
+
+| 主题 | 问题数 | 常见问题 |
 |------|--------|----------|
-| 入门 | 3章 | 1-2天 |
-| 核心功能 | 4章 | 3-5天 |
-| 技能系统 | 3章 | 2-3天 |
-| 实战案例 | 4章 | 5-7天 |
-| 进阶 | 4章 | 7天+ |
-| 附录 | 4个 | 参考 |
+| **部署安装** | 5 | 系统要求、安装失败、配对问题 |
+| **技能使用** | 6 | 安装技能、PDF处理、Excel处理 |
+| **定时任务** | 2 | 设置提醒、提醒不生效 |
+| **隐私安全** | 1 | 数据保护 |
+| **模型配置** | 2 | 切换模型、支持哪些模型 |
+| **维护管理** | 3 | 更新、备份、卸载 |
 
----
+### 使用问答工具
 
-## 💡 快速示例
+```bash
+# 列出所有问题
+qa_tool --list
 
-### 文件操作
+# 搜索问题
+qa_tool --search 安装
 
-```
-帮我把这个 PDF 转成文字
-```
-
-### 定时任务
-
-```
-每天早上9点提醒我开会
-```
-
-### 浏览器自动化
-
-```
-帮我打开这个网站并截图
+# 查看主题
+qa_tool --topic 技能
 ```
 
 ---
 
-## 🎯 能帮你做什么？
+## 📦 下载问答工具
 
-### 💼 工作场景
+前往 [Releases](https://github.com/stevexia37/openclaw-skills-guide/releases) 页面下载：
 
-- 文档处理：PDF转文字、Excel分析、Word编辑
-- 日程管理：提醒事项、待办整理、周报生成
-- 邮件处理：筛选重要邮件、自动回复
+| 系统 | 文件 | 说明 |
+|------|------|------|
+| Windows | `qa_tool_windows.exe` | 双击运行 |
+| macOS | `qa_tool_macos` | chmod +x 后运行 |
+| Linux | `qa_tool_linux` | chmod +x 后运行 |
 
-### 💻 开发场景
-
-- 代码助手：写代码、调试、解释代码
-- 自动化：定时脚本、批量处理
-- 工具类：JSON格式化、代码片段
-
-### 🏠 生活场景
-
-- 学习辅助：翻译文档、解释概念、制定计划
-- 投资理财：价格监控、数据分析
-- 家务管理：提醒事项、购物清单
+**注意：** 需要同时下载 `knowledge/` 目录中的文件。
 
 ---
 
-## 📦 示例代码
+## 🛠️ 工具脚本
 
-```
-examples/
-├── automation/     → 自动化脚本示例
-├── configs/        → 配置文件示例
-└── skills/         → 技能开发示例
-```
-
-👉 [查看示例](./examples/automation/README.md)
-
----
-
-## 🔗 相关资源
-
-| 资源 | 链接 |
+| 脚本 | 功能 |
 |------|------|
-| OpenClaw 官网 | https://openclaw.ai |
-| ClawHub 技能市场 | https://clawhub.ai |
-| 技能仓库 | https://github.com/stevexia37/openclaw-skills |
-| 更新日志 | [CHANGELOG.md](./CHANGELOG.md) |
+| [health_check.sh](./tools/health_check.sh) | 检查 OpenClaw 运行状态 |
 
 ---
 
 ## 🤝 贡献指南
 
-欢迎完善这个百科！
+欢迎贡献问题和答案！
 
-### 贡献方式
+### 如何贡献
 
-1. Fork 本仓库
-2. 创建新分支
-3. 添加或修改内容
-4. 提交 PR
+1. **新增问题**：编辑 `knowledge/faq.jsonl`
+2. **补充教程**：在 `docs/` 下新建文件
+3. **改进工具**：优化 `scripts/qa_cli.py`
 
-### 贡献方向
+👉 [详细贡献指南](./CONTRIBUTING.md)
 
-- 📝 完善文档内容
-- 🐛 修正错误
-- 🌍 翻译成其他语言
-- 💡 分享使用技巧
+---
+
+## ⭐ Star & Fork
+
+如果觉得有用，请：
+
+- ⭐ 点击右上角 Star 支持项目
+- 🔀 Fork 到你的账号进行改进
+- 📢 分享给更多需要的人
+
+---
+
+## 📞 求助渠道
+
+| 渠道 | 地址 |
+|------|------|
+| 问答工具 | [下载](https://github.com/stevexia37/openclaw-skills-guide/releases) |
+| GitHub Issues | [提问](https://github.com/stevexia37/openclaw-skills-guide/issues) |
+| 官方网站 | https://openclaw.ai |
+| 技能市场 | https://clawhub.ai |
+
+---
+
+## 📄 许可证
+
+MIT License - 自由使用、修改和分享
 
 ---
 
 <div align="center">
 
-**⭐ 觉得有用？点个 Star 支持一下！**
+**🦞 Made with ❤️ for OpenClaw users**
 
-Made with ❤️ for OpenClaw users
+**分享给朋友，一起学习！**
 
 </div>

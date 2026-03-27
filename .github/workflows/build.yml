@@ -1,0 +1,143 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'  # 当推送 v 开头的 tag 时触发
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            artifact_name: qa_tool_linux
+          - os: windows-latest
+            artifact_name: qa_tool_windows.exe
+          - os: macos-latest
+            artifact_name: qa_tool_macos
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install PyInstaller
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller
+
+      - name: Build executable
+        run: |
+          pyinstaller --onefile --name ${{ matrix.artifact_name }} scripts/qa_cli.py
+
+      - name: Copy knowledge files
+        run: |
+          mkdir -p dist/knowledge
+          cp knowledge/faq.jsonl dist/knowledge/
+          cp knowledge/topics.json dist/knowledge/
+
+      - name: Create release README
+        run: |
+          cat > dist/README_RELEASE.md << 'EOF'
+          # OpenClaw 问答工具 - 使用说明
+          
+          ## 📦 下载说明
+          
+          根据你的操作系统，下载对应的文件：
+          
+          - **Windows**: `qa_tool_windows.exe`
+          - **macOS**: `qa_tool_macos`
+          - **Linux**: `qa_tool_linux`
+          
+          ## 🚀 使用方法
+          
+          ### Windows
+          双击 `qa_tool_windows.exe` 运行
+          
+          ### macOS/Linux
+          ```bash
+          chmod +x qa_tool_macos
+          ./qa_tool_macos
+          ```
+          
+          ## 📖 功能
+          
+          - 交互式问答
+          - 搜索问题
+          - 查看主题分类
+          
+          详细说明见 GitHub README。
+          EOF
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact_name }}
+          path: |
+            dist/${{ matrix.artifact_name }}
+            dist/knowledge/
+            dist/README_RELEASE.md
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            artifacts/qa_tool_linux/qa_tool_linux
+            artifacts/qa_tool_linux/knowledge/*
+            artifacts/qa_tool_linux/README_RELEASE.md
+            artifacts/qa_tool_windows.exe/qa_tool_windows.exe
+            artifacts/qa_tool_windows.exe/knowledge/*
+            artifacts/qa_tool_windows.exe/README_RELEASE.md
+            artifacts/qa_tool_macos/qa_tool_macos
+            artifacts/qa_tool_macos/knowledge/*
+            artifacts/qa_tool_macos/README_RELEASE.md
+          body: |
+            ## 🦞 OpenClaw 问答工具
+            
+            ### 下载说明
+            
+            根据你的操作系统下载对应文件：
+            
+            | 系统 | 文件 |
+            |------|------|
+            | Windows | `qa_tool_windows.exe` |
+            | macOS | `qa_tool_macos` |
+            | Linux | `qa_tool_linux` |
+            
+            ### 使用方法
+            
+            1. 下载文件和 `knowledge/` 目录
+            2. 运行可执行文件
+            3. 输入问题获取答案
+            
+            ### 功能
+            
+            - 📚 24+ 常见问题知识库
+            - 🔍 智能搜索匹配
+            - 📂 主题分类浏览
+            
+            ---
+            
+            详细说明见 [README](https://github.com/stevexia37/openclaw-skills-guide)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
