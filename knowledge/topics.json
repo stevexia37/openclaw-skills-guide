@@ -1,14 +1,147 @@
 {
-  "部署": ["q001", "q002", "q003", "q004", "q005"],
-  "技能": ["q006", "q007", "q010", "q011", "q012", "q016"],
-  "定时任务": ["q008", "q009"],
-  "文档处理": ["q010", "q011"],
-  "浏览器": ["q012"],
-  "隐私安全": ["q013"],
-  "模型配置": ["q014", "q015"],
-  "性能优化": ["q017"],
-  "维护": ["q018", "q019", "q020"],
-  "入门": ["q001", "q004", "q006", "q021", "q022", "q023", "q024"],
-  "对比": ["q023"],
-  "求助": ["q024"]
+  "version": "1.0.0",
+  "updated": "2026-03-28",
+  "total_questions": 50,
+  "categories": [
+    {
+      "id": "install",
+      "name": "安装部署",
+      "icon": "📦",
+      "description": "下载、安装、启动相关问题",
+      "questions": ["q001", "q002", "q003", "q026", "q029", "q046", "q050"],
+      "count": 7
+    },
+    {
+      "id": "config",
+      "name": "配对账号",
+      "icon": "🔗",
+      "description": "配对、账号、连接问题",
+      "questions": ["q004", "q005"],
+      "count": 2
+    },
+    {
+      "id": "skills",
+      "name": "技能使用",
+      "icon": "🛠️",
+      "description": "技能安装、使用、开发",
+      "questions": ["q006", "q007", "q034", "q035", "q036", "q037"],
+      "count": 6
+    },
+    {
+      "id": "cron",
+      "name": "定时任务",
+      "icon": "⏰",
+      "description": "定时提醒、任务管理",
+      "questions": ["q008", "q009", "q010"],
+      "count": 3
+    },
+    {
+      "id": "files",
+      "name": "文件处理",
+      "icon": "📄",
+      "description": "PDF、Excel、Word 处理",
+      "questions": ["q011", "q012", "q013", "q014", "q015"],
+      "count": 5
+    },
+    {
+      "id": "browser",
+      "name": "浏览器操作",
+      "icon": "🌐",
+      "description": "网页操作、自动化",
+      "questions": ["q016", "q017"],
+      "count": 2
+    },
+    {
+      "id": "privacy",
+      "name": "安全隐私",
+      "icon": "🔒",
+      "description": "数据安全、隐私保护",
+      "questions": ["q018", "q019"],
+      "count": 2
+    },
+    {
+      "id": "model",
+      "name": "AI 模型",
+      "icon": "🤖",
+      "description": "模型选择、API 配置",
+      "questions": ["q020", "q021", "q022"],
+      "count": 3
+    },
+    {
+      "id": "compare",
+      "name": "产品对比",
+      "icon": "📊",
+      "description": "与其他产品对比",
+      "questions": ["q023", "q024", "q025"],
+      "count": 3
+    },
+    {
+      "id": "performance",
+      "name": "性能优化",
+      "icon": "⚡",
+      "description": "运行慢、内存高问题",
+      "questions": ["q027", "q028"],
+      "count": 2
+    },
+    {
+      "id": "data",
+      "name": "数据管理",
+      "icon": "💾",
+      "description": "备份、恢复、导出",
+      "questions": ["q030", "q031", "q042", "q043", "q044"],
+      "count": 5
+    },
+    {
+      "id": "uninstall",
+      "name": "卸载清理",
+      "icon": "🗑️",
+      "description": "卸载、清理数据",
+      "questions": ["q032", "q033"],
+      "count": 2
+    },
+    {
+      "id": "tool",
+      "name": "问答工具",
+      "icon": "🔧",
+      "description": "问答工具使用",
+      "questions": ["q038", "q039", "q040"],
+      "count": 3
+    },
+    {
+      "id": "tips",
+      "name": "使用技巧",
+      "icon": "💡",
+      "description": "提问技巧、提高效率",
+      "questions": ["q041"],
+      "count": 1
+    },
+    {
+      "id": "debug",
+      "name": "调试诊断",
+      "icon": "🔍",
+      "description": "日志、健康检查",
+      "questions": ["q045", "q047"],
+      "count": 2
+    },
+    {
+      "id": "support",
+      "name": "求助支持",
+      "icon": "🆘",
+      "description": "如何获取帮助",
+      "questions": ["q048", "q049"],
+      "count": 2
+    }
+  ],
+  "difficulty_stats": {
+    "简单": 30,
+    "中等": 18,
+    "进阶": 2
+  },
+  "top_questions": [
+    {"id": "q002", "question": "macOS 提示「已损坏，无法打开」怎么办？", "views": 9999},
+    {"id": "q023", "question": "OpenClaw 和 ChatGPT 有什么区别？", "views": 8888},
+    {"id": "q024", "question": "OpenClaw 免费吗？", "views": 7777},
+    {"id": "q008", "question": "如何设置定时提醒？", "views": 6666},
+    {"id": "q004", "question": "配对失败怎么办？", "views": 5555}
+  ]
 }

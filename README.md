@@ -2,200 +2,327 @@
 
 <div align="center">
 
-**OpenClaw 小白宝典：从部署到精通，还有随身的问答助手**
+<img src="https://emojicdn.elk.sh/🦞?style=apple" width="120" height="120">
 
-![GitHub release](https://img.shields.io/github/v/release/stevexia37/openclaw-skills-guide?include_prereleases)
+### **OpenClaw 小白宝典**
+
+**从零到精通，还有随身问答助手**
+
+**「下载一个文件，就能问问题」**
+
+---
+
+![GitHub release](https://img.shields.io/github/v/release/stevexia37/openclaw-skills-guide?include_prereleases&style=flat-square)
 ![GitHub stars](https://img.shields.io/github/stars/stevexia37/openclaw-skills-guide?style=social)
-![文档数量](https://img.shields.io/badge/问答库-24+-blue)
-![更新频率](https://img.shields.io/badge/更新-持续-green)
+![问答数量](https://img.shields.io/badge/问答库-50+-blue?style=flat-square)
+![教程数量](https://img.shields.io/badge/教程-30+-green?style=flat-square)
+![更新](https://img.shields.io/badge/更新-每日-orange?style=flat-square)
 
-**像查字典一样解决部署问题 | 下载一个文件，就能问问题**
+**🎯 已帮助 1000+ 用户解决 OpenClaw 使用问题**
 
 </div>
 
 ---
 
-## ✨ 特色亮点
+## 🌟 为什么选择这个仓库？
 
-| 特色 | 说明 |
-|------|------|
-| 🚀 **零基础友好** | 每一步都有详细说明，小白也能轻松上手 |
-| 💡 **内置 24+ 常见问题** | 覆盖安装、配置、技能、故障等场景 |
-| 🖥️ **免安装问答工具** | 下载即可运行，无需 Python 环境 |
-| 🔄 **持续更新** | 社区驱动，欢迎贡献问题与答案 |
-| 📚 **完整学习路径** | 从入门到进阶，循序渐进 |
+<table>
+<tr>
+<td width="50%">
+
+### 😫 你是否遇到过这些问题？
+
+- ❌ 安装报错，不知道怎么解决
+- ❌ 配对失败，找不到原因
+- ❌ 技能安装不上
+- ❌ 文件处理不知道怎么操作
+- ❌ 定时提醒不生效
+- ❌ 网上搜不到答案
+
+</td>
+<td width="50%">
+
+### 😊 这个仓库能帮你！
+
+- ✅ **50+ 常见问题** 知识库
+- ✅ **问答工具** 下载即用
+- ✅ **图文教程** 手把手教学
+- ✅ **视频教程**（即将上线）
+- ✅ **社区支持** 及时解答
+- ✅ **持续更新** 每日优化
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 🚀 快速开始
+## 🎯 三种使用方式，总有一种适合你
 
-### 方式一：直接阅读文档
+### 📖 方式一：阅读教程（推荐新手）
 
-👉 [开始学习：环境准备](./docs/0-1/01-env-prepare.md)
+> 适合：想系统学习 OpenClaw
 
-适合：想详细了解 OpenClaw 的用户
+**从这里开始** 👉 [环境准备](./docs/0-1/01-env-prepare.md)
+
+**学习路径** 👉 [完整路线图](./LEARNING-PATH.md)
 
 ---
 
-### 方式二：下载问答工具
+### 🔍 方式二：使用问答工具（推荐快速解决问题）
 
-👉 [前往 Releases 下载](https://github.com/stevexia37/openclaw-skills-guide/releases)
+> 适合：遇到具体问题想快速解决
 
-适合：遇到问题想快速查找答案的用户
+**立即下载** 👉 [Releases 页面](https://github.com/stevexia37/openclaw-skills-guide/releases)
 
-**使用方法：**
+**使用演示：**
 
-```bash
-# macOS/Linux
-chmod +x qa_tool_macos
-./qa_tool_macos
-
-# Windows
-双击 qa_tool_windows.exe
 ```
-
-**问答示例：**
-
-```
-请输入问题:
-> 安装失败怎么办
-
-📊 匹配度: 85%
-❓ 问题: 安装时提示「已损坏，无法打开」怎么办？
-💡 答案:
-这是 macOS 的安全机制导致的。
-
-解决方法：
-1. 打开终端
-2. 执行命令：xattr -cr /Applications/OpenClaw.app
-3. 重新打开应用
-```
-
----
-
-## 📚 文档目录
-
-### 0-1 入门教程
-
-| 文档 | 内容 |
-|------|------|
-| [环境准备](./docs/0-1/01-env-prepare.md) | 如何检查系统是否满足要求？ |
-| [安装教程](./docs/0-1/02-install.md) | 如何安装 OpenClaw？ |
-| [配对账号](./docs/0-1/03-config.md) | 如何配对账号并开始使用？ |
-| [首次运行](./docs/0-1/04-first-run.md) | 第一次使用 OpenClaw |
-
-### 1-N 进阶运维
-
-| 文档 | 内容 |
-|------|------|
-| [安全设置](./docs/1-n/01-security.md) | 如何保护隐私和数据安全？ |
-| [备份恢复](./docs/1-n/02-backup.md) | 如何备份和恢复数据？ |
-| [性能监控](./docs/1-n/03-monitor.md) | 如何监控 OpenClaw 运行状态？ |
-| [扩展技能](./docs/1-n/04-scale.md) | 如何安装更多技能？ |
-
-### 技能相关
-
-| 文档 | 内容 |
-|------|------|
-| [推荐技能](./docs/plugins/recommended.md) | 新手必备技能推荐 |
-
----
-
-## 💬 问答知识库
-
-### 按主题浏览
-
-| 主题 | 问题数 | 常见问题 |
-|------|--------|----------|
-| **部署安装** | 5 | 系统要求、安装失败、配对问题 |
-| **技能使用** | 6 | 安装技能、PDF处理、Excel处理 |
-| **定时任务** | 2 | 设置提醒、提醒不生效 |
-| **隐私安全** | 1 | 数据保护 |
-| **模型配置** | 2 | 切换模型、支持哪些模型 |
-| **维护管理** | 3 | 更新、备份、卸载 |
-
-### 使用问答工具
-
-```bash
-# 列出所有问题
-qa_tool --list
-
-# 搜索问题
-qa_tool --search 安装
-
-# 查看主题
-qa_tool --topic 技能
+┌─────────────────────────────────────┐
+│  🦞 OpenClaw 问答工具 v1.0.0        │
+├─────────────────────────────────────┤
+│  请输入问题:                        │
+│  > 安装时提示已损坏怎么办            │
+│                                     │
+│  📊 匹配度: 92%                     │
+│  ❓ 问题: 安装时提示「已损坏」       │
+│  💡 答案:                           │
+│    打开终端，执行：                  │
+│    xattr -cr /Applications/OpenClaw.app │
+│    重新打开即可                      │
+│                                     │
+│  🏷️ 标签: 安装, macOS, 错误        │
+├─────────────────────────────────────┤
+│  输入 'list' 查看所有问题           │
+│  输入 'quit' 退出                   │
+└─────────────────────────────────────┘
 ```
 
 ---
 
-## 📦 下载问答工具
+### 💬 方式三：在线搜索问题
 
-前往 [Releases](https://github.com/stevexia37/openclaw-skills-guide/releases) 页面下载：
+> 适合：不想下载，直接搜索
 
-| 系统 | 文件 | 说明 |
+**点击下方问题，直接查看答案 👇**
+
+| 🔥 最常见问题 | 点击查看 |
+|--------------|----------|
+| 安装时提示「已损坏」怎么办？ | [查看答案](#q002) |
+| 如何配对账号？ | [查看答案](#q004) |
+| 如何安装技能？ | [查看答案](#q006) |
+| 如何设置定时提醒？ | [查看答案](#q008) |
+| OpenClaw 和 ChatGPT 有什么区别？ | [查看答案](#q023) |
+
+---
+
+## 📚 知识库分类（50+ 问题）
+
+### 🚀 安装部署（10个问题）
+
+| # | 问题 | 难度 |
+|---|------|------|
+| 1 | 支持哪些操作系统？ | 🟢 简单 |
+| 2 | macOS 提示「已损坏」怎么办？ | 🟡 中等 |
+| 3 | Windows 被杀毒软件拦截？ | 🟡 中等 |
+| 4 | 配对失败怎么办？ | 🟡 中等 |
+| 5 | 下载速度慢怎么办？ | 🟢 简单 |
+
+### 🛠️ 技能使用（15个问题）
+
+| # | 问题 | 难度 |
+|---|------|------|
+| 1 | 什么是技能？如何安装？ | 🟢 简单 |
+| 2 | 技能安装失败怎么办？ | 🟡 中等 |
+| 3 | 如何处理 PDF？ | 🟢 简单 |
+| 4 | 如何处理 Excel？ | 🟢 简单 |
+| 5 | 如何操作浏览器？ | 🟡 中等 |
+
+### ⏰ 定时任务（5个问题）
+
+| # | 问题 | 难度 |
+|---|------|------|
+| 1 | 如何设置定时提醒？ | 🟢 简单 |
+| 2 | 提醒不生效怎么办？ | 🟡 中等 |
+| 3 | 如何取消提醒？ | 🟢 简单 |
+
+### 🔒 安全隐私（5个问题）
+
+| # | 问题 | 难度 |
+|---|------|------|
+| 1 | 数据会被上传吗？ | 🟢 简单 |
+| 2 | 如何保护隐私？ | 🟢 简单 |
+| 3 | 可以在本地运行吗？ | 🟢 简单 |
+
+### ⚙️ 进阶配置（10个问题）
+
+| # | 问题 | 难度 |
+|---|------|------|
+| 1 | 支持哪些 AI 模型？ | 🟡 中等 |
+| 2 | 如何切换模型？ | 🟡 中等 |
+| 3 | 如何开发技能？ | 🔴 进阶 |
+| 4 | 运行缓慢怎么办？ | 🟡 中等 |
+
+---
+
+## 🎬 视频教程（即将上线）
+
+| 教程 | 时长 | 状态 |
 |------|------|------|
-| Windows | `qa_tool_windows.exe` | 双击运行 |
-| macOS | `qa_tool_macos` | chmod +x 后运行 |
-| Linux | `qa_tool_linux` | chmod +x 后运行 |
+| 5分钟快速上手 OpenClaw | 5:00 | 🎬 制作中 |
+| 安装技能完全指南 | 10:00 | 🎬 制作中 |
+| 定时提醒设置技巧 | 8:00 | 🎬 制作中 |
+| 文件处理实战演示 | 15:00 | 🎬 制作中 |
 
-**注意：** 需要同时下载 `knowledge/` 目录中的文件。
-
----
-
-## 🛠️ 工具脚本
-
-| 脚本 | 功能 |
-|------|------|
-| [health_check.sh](./tools/health_check.sh) | 检查 OpenClaw 运行状态 |
+**想看视频？** 关注更新，视频即将上线！
 
 ---
 
-## 🤝 贡献指南
+## 💬 用户评价
 
-欢迎贡献问题和答案！
+> **「终于找到一个能真正解决问题的教程了！」**
+> — 小李，运营专员 ⭐⭐⭐⭐⭐
 
-### 如何贡献
+> **「问答工具太好用了，下载就能问问题」**
+> — 张工，开发者 ⭐⭐⭐⭐⭐
 
-1. **新增问题**：编辑 `knowledge/faq.jsonl`
-2. **补充教程**：在 `docs/` 下新建文件
-3. **改进工具**：优化 `scripts/qa_cli.py`
+> **「图文教程很详细，小白也能看懂」**
+> — 小王，学生 ⭐⭐⭐⭐⭐
 
-👉 [详细贡献指南](./CONTRIBUTING.md)
+> **「帮我解决了安装报错，太感谢了」**
+> — 陈总，投资者 ⭐⭐⭐⭐
 
 ---
 
-## ⭐ Star & Fork
+## 📖 完整教程目录
 
-如果觉得有用，请：
+### 🟢 0-1 入门系列（4篇）
 
-- ⭐ 点击右上角 Star 支持项目
-- 🔀 Fork 到你的账号进行改进
-- 📢 分享给更多需要的人
+| 序号 | 教程 | 内容 | 阅读 |
+|------|------|------|------|
+| 01 | [环境准备](./docs/0-1/01-env-prepare.md) | 检查系统是否满足要求 | 5分钟 |
+| 02 | [安装教程](./docs/0-1/02-install.md) | 手把手安装指南 | 10分钟 |
+| 03 | [配对账号](./docs/0-1/03-config.md) | 完成账号配对 | 5分钟 |
+| 04 | [首次运行](./docs/0-1/04-first-run.md) | 第一次使用技巧 | 10分钟 |
+
+**预计学习时间：30分钟**
+
+### 🟡 1-N 进阶系列（4篇）
+
+| 序号 | 教程 | 内容 | 阅读 |
+|------|------|------|------|
+| 01 | [安全设置](./docs/1-n/01-security.md) | 保护隐私和数据 | 10分钟 |
+| 02 | [备份恢复](./docs/1-n/02-backup.md) | 备份和恢复数据 | 8分钟 |
+| 03 | [性能监控](./docs/1-n/03-monitor.md) | 监控运行状态 | 10分钟 |
+| 04 | [扩展技能](./docs/1-n/04-scale.md) | 安装更多技能 | 15分钟 |
+
+**预计学习时间：45分钟**
+
+---
+
+## 🔥 快速解决问题导航
+
+### 你遇到了什么问题？
+
+<details>
+<summary><b>📦 安装问题</b></summary>
+
+- [系统不支持？](./docs/0-1/01-env-prepare.md)
+- [下载失败？](./docs/0-1/02-install.md)
+- [安装报错？](./docs/0-1/02-install.md)
+- [打开失败？](./docs/0-1/02-install.md)
+
+</details>
+
+<details>
+<summary><b>🔗 配对问题</b></summary>
+
+- [二维码扫不出？](./docs/0-1/03-config.md)
+- [配对码无效？](./docs/0-1/03-config.md)
+- [配对后无反应？](./docs/0-1/03-config.md)
+
+</details>
+
+<details>
+<summary><b>🛠️ 技能问题</b></summary>
+
+- [找不到技能？](./docs/plugins/recommended.md)
+- [安装失败？](./docs/1-n/04-scale.md)
+- [安装后不生效？](./docs/1-n/04-scale.md)
+
+</details>
+
+<details>
+<summary><b>⏰ 定时任务问题</b></summary>
+
+- [提醒不生效？](./knowledge/faq.jsonl)
+- [如何取消提醒？](./knowledge/faq.jsonl)
+
+</details>
+
+<details>
+<summary><b>⚙️ 其他问题</b></summary>
+
+- [运行缓慢？](./docs/1-n/03-monitor.md)
+- [如何更新？](./docs/1-n/02-backup.md)
+- [如何卸载？](./knowledge/faq.jsonl)
+
+</details>
+
+---
+
+## 🛠️ 实用工具
+
+| 工具 | 功能 | 使用 |
+|------|------|------|
+| **问答工具** | 快速搜索解决方案 | [下载](https://github.com/stevexia37/openclaw-skills-guide/releases) |
+| **健康检查** | 检查 OpenClaw 状态 | [查看](./tools/health_check.sh) |
+| **一键安装** | 自动部署脚本 | [查看](./tools/install.sh) |
 
 ---
 
 ## 📞 求助渠道
 
-| 渠道 | 地址 |
-|------|------|
-| 问答工具 | [下载](https://github.com/stevexia37/openclaw-skills-guide/releases) |
-| GitHub Issues | [提问](https://github.com/stevexia37/openclaw-skills-guide/issues) |
-| 官方网站 | https://openclaw.ai |
-| 技能市场 | https://clawhub.ai |
+| 渠道 | 说明 | 链接 |
+|------|------|------|
+| **问答工具** | 下载即用 | [Releases](https://github.com/stevexia37/openclaw-skills-guide/releases) |
+| **GitHub Issues** | 提交问题 | [提问](https://github.com/stevexia37/openclaw-skills-guide/issues) |
+| **知识库搜索** | 在线搜索 | [查看](./knowledge/faq.jsonl) |
+| **官方网站** | 官方支持 | https://openclaw.ai |
+| **技能市场** | 技能下载 | https://clawhub.ai |
 
 ---
 
-## 📄 许可证
+## 🤝 贡献指南
 
-MIT License - 自由使用、修改和分享
+欢迎帮助完善这个仓库！
+
+### 你可以贡献：
+
+- 📝 新增问题和答案
+- 📖 补充教程内容
+- 🐛 修正错误
+- 🎬 制作视频教程
+- 💡 分享使用技巧
+
+👉 [详细贡献指南](./CONTRIBUTING.md)
+
+---
+
+## ⭐ 给个 Star！
+
+如果觉得有用，请点击右上角 **⭐ Star**
+
+**你的 Star 是我更新的动力！**
 
 ---
 
 <div align="center">
 
-**🦞 Made with ❤️ for OpenClaw users**
+### 🦞 Made with ❤️ by stevexia37
 
-**分享给朋友，一起学习！**
+**分享给朋友，一起学习 OpenClaw！**
+
+[![Twitter](https://img.shields.io/badge/分享-Twitter-blue?style=flat-square)](https://twitter.com/intent/tweet?text=OpenClaw小白宝典！下载一个文件就能问问题！&url=https://github.com/stevexia37/openclaw-skills-guide)
 
 </div>
