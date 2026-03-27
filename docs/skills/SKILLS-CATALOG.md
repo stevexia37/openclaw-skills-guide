@@ -32,6 +32,7 @@
 | **💬 Communication** | 146 | 沟通工具、消息平台 |
 | **📄 PDF & Documents** | 105 | 文档处理、PDF操作 |
 | **📢 Marketing & Sales** | 102 | 市场营销、销售辅助 |
+| **📱 社交媒体运营** | 82+ | 小红书、抖音、微信运营 ⭐ |
 | **🎬 Media & Streaming** | 85 | 流媒体、视频处理 |
 | **📝 Notes & PKM** | 70 | 笔记、知识管理 |
 | **🗓️ Calendar & Scheduling** | 65 | 日历、日程安排 |
@@ -332,7 +333,50 @@ Comm (146)     ██                        2.8%
 
 ---
 
-### 📢 12. Marketing & Sales（102 个）
+### 📱 12.5 社交媒体运营（82+ 个）⭐ 新增热门分类
+
+**小红书、抖音、微信等社交平台运营技能**
+
+| 技能名称 | 功能描述 | Stars |
+|----------|----------|-------|
+| `xiaohongshu-skills` | 小红书全能助手（发布/评论/搜索/互动） | 2.3k ⭐ |
+| `xiaohongshu-cdp` | Chrome CDP 自动化（绕过检测） | 1.2k ⭐ |
+| `xiaohongshu-ops` | 小红书运营助手（数据分析） | 800+ ⭐ |
+| `xiaohongshu-search` | 内容搜索与提取 | 500+ ⭐ |
+| `xiaohongshu-publish` | 自动发布笔记 | 300+ ⭐ |
+| `xiaohongshu-comment` | 评论自动回复 | 200+ ⭐ |
+| `xiaohongshu-analytics` | 数据看板抓取 | 150+ ⭐ |
+| `douyin-helper` | 抖音运营辅助 | 1.5k ⭐ |
+| `douyin-publish` | 抖音视频发布 | 800+ ⭐ |
+| `douyin-analytics` | 抖音数据分析 | 600+ ⭐ |
+| `wechat-ops` | 微信公众号运营 | 1.8k ⭐ |
+| `wechat-publish` | 公众号文章发布 | 900+ ⭐ |
+| `wechat-reply` | 公众号自动回复 | 400+ ⭐ |
+| `wechat-stats` | 公众号数据统计 | 200+ ⭐ |
+| `tiktok-helper` | TikTok海外运营 | 500+ ⭐ |
+
+**热门技能详情**：
+
+#### 🔥 XiaohongshuSkills（2.3k stars）
+
+> **GitHub**: https://github.com/white0dew/XiaohongshuSkills
+
+**功能列表**：
+- ✅ 自动发布内容（标题、正文、图片）
+- ✅ 多账号管理
+- ✅ 无头模式运行（绕过检测）
+- ✅ 首页推荐流抓取
+- ✅ 内容搜索与详情获取
+- ✅ 评论发表与回复
+- ✅ 点赞/收藏/互动操作
+- ✅ 用户主页信息提取
+- ✅ 数据看板抓取
+
+**技术原理**：Chrome DevTools Protocol (CDP)
+
+---
+
+### 📢 13. Marketing & Sales（102 个）
 
 **市场营销类技能**
 

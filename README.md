@@ -301,6 +301,7 @@
 | **💬 Communication** | **146** | email, slack, discord, telegram, wechat |
 | **📄 PDF & Documents** | **105** | pdf（必装）, xlsx, docx, ocr, markdown |
 | **📢 Marketing** | **102** | seo-helper, content-writer, social-media |
+| **📱 社交媒体运营** | **82+** | xiaohongshu-skills(2.3k⭐), douyin-helper, wechat-ops ⭐ |
 | **🎬 Media & Streaming** | **85** | video-downloader, audio-converter, podcast-helper |
 | **📝 Notes & PKM** | **70** | obsidian, notion, evernote, flashcard |
 | **🗓️ Calendar** | **65** | calendar, scheduler, meeting-helper |
