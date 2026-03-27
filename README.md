@@ -283,18 +283,38 @@
 
 ---
 
-## 🏆 #1 社区技能资源（强烈推荐）
+## 📚 5198 个精选技能分类目录
 
-> **VoltAgent/awesome-openclaw-skills** - 42.4k stars，5,211 个精选技能！
+> **来自 [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) 的精选技能清单**
 
-| 指标 | 数据 |
-|------|------|
-| Stars | **42.4k** ⭐ |
-| 技能数量 | **5,211 个** |
-| 月访问量 | **1M+** |
-| 分类 | **24 个详细分类** |
+| 分类 | 技能数 | 热门技能 |
+|------|--------|----------|
+| **💻 Coding & IDEs** | **1,184** | code-assistant, debug-helper, code-review, refactoring |
+| **🌐 Web & Frontend** | **919** | html-generator, css-helper, react-snippets, vue-helper |
+| **🖥️ DevOps & Cloud** | **393** | docker-helper, kubernetes, aws-cli, terraform |
+| **🔍 Search & Research** | **345** | multi-search, web-scraper, news-fetcher, academic-search |
+| **🤖 Browser & Automation** | **322** | browser, selenium, playwright, form-filler |
+| **📅 Productivity** | **205** | cron（必装）, todo-manager, reminder, pomodoro |
+| **🤖 AI & LLMs** | **176** | openai-chat, claude-chat, local-llm, prompt-helper |
+| **🖼️ Image & Video** | **170** | image-gen, video-maker, background-remover, watermark |
+| **📝 Git & GitHub** | **167** | git-helper, github-issues, commit-helper, changelog |
+| **💬 Communication** | **146** | email, slack, discord, telegram, wechat |
+| **📄 PDF & Documents** | **105** | pdf（必装）, xlsx, docx, ocr, markdown |
+| **📢 Marketing** | **102** | seo-helper, content-writer, social-media |
+| **🎬 Media & Streaming** | **85** | video-downloader, audio-converter, podcast-helper |
+| **📝 Notes & PKM** | **70** | obsidian, notion, evernote, flashcard |
+| **🗓️ Calendar** | **65** | calendar, scheduler, meeting-helper |
+| **🔒 Security** | **53** | password-gen, vault-helper, security-check |
+| **🛒 Shopping** | **51** | price-tracker, coupon-finder, comparison-helper |
+| **🎤 Speech** | **45** | whisper（必装）, voice-commands, transcription |
+| **🍎 Apple Apps** | **44** | shortcuts, safari-helper, apple-scripts |
+| **🏠 Smart Home** | **41** | home-assistant, smart-lights, thermostat |
+| **🔄 Self-Hosted** | **33** | n8n-helper, huginn, node-red |
+| **📱 iOS/macOS Dev** | **29** | swift-helper, swiftui-helper, xcode-helper |
+| **📊 Data & Analytics** | **28** | data-analysis, chart-maker, sql-helper |
+| **🔗 Integrations** | **200+** | api-helper, webhook-helper, oauth-helper |
 
-**链接**：👉 [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)
+**总计：5,198 个精选技能** 👉 [查看完整分类清单](./docs/skills/SKILLS-CATALOG.md)
 
 ---
 
