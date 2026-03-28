@@ -22,6 +22,8 @@
 
 **🎯 已帮助 1000+ 用户解决 OpenClaw 使用问题**
 
+[💡 分享给朋友](./SHARE.md) | [🌟 给个 Star](https://github.com/stevexia37/openclaw-skills-guide/stargazers)
+
 </div>
 
 ---
