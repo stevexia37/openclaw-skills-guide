@@ -289,35 +289,35 @@
 
 > **来自 [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) 的精选技能清单**
 
-| 分类 | 技能数 | 热门技能 |
-|------|--------|----------|
-| **💻 Coding & IDEs** | **1,184** | code-assistant, debug-helper, code-review, refactoring |
-| **🌐 Web & Frontend** | **919** | html-generator, css-helper, react-snippets, vue-helper |
-| **🖥️ DevOps & Cloud** | **393** | docker-helper, kubernetes, aws-cli, terraform |
-| **🔍 Search & Research** | **345** | multi-search, web-scraper, news-fetcher, academic-search |
-| **🤖 Browser & Automation** | **322** | browser, selenium, playwright, form-filler |
-| **📅 Productivity** | **205** | cron（必装）, todo-manager, reminder, pomodoro |
-| **🤖 AI & LLMs** | **176** | openai-chat, claude-chat, local-llm, prompt-helper |
-| **🖼️ Image & Video** | **170** | image-gen, video-maker, background-remover, watermark |
-| **📝 Git & GitHub** | **167** | git-helper, github-issues, commit-helper, changelog |
-| **💬 Communication** | **146** | email, slack, discord, telegram, wechat |
-| **📄 PDF & Documents** | **105** | pdf（必装）, xlsx, docx, ocr, markdown |
-| **📢 Marketing** | **102** | seo-helper, content-writer, social-media |
-| **📱 社交媒体运营** | **82+** | xiaohongshu-skills(2.3k⭐), douyin-helper, wechat-ops ⭐ |
-| **🎬 Media & Streaming** | **85** | video-downloader, audio-converter, podcast-helper |
-| **📝 Notes & PKM** | **70** | obsidian, notion, evernote, flashcard |
-| **🗓️ Calendar** | **65** | calendar, scheduler, meeting-helper |
-| **🔒 Security** | **53** | password-gen, vault-helper, security-check |
-| **🛒 Shopping** | **51** | price-tracker, coupon-finder, comparison-helper |
-| **🎤 Speech** | **45** | whisper（必装）, voice-commands, transcription |
-| **🍎 Apple Apps** | **44** | shortcuts, safari-helper, apple-scripts |
-| **🏠 Smart Home** | **41** | home-assistant, smart-lights, thermostat |
-| **🔄 Self-Hosted** | **33** | n8n-helper, huginn, node-red |
-| **📱 iOS/macOS Dev** | **29** | swift-helper, swiftui-helper, xcode-helper |
-| **📊 Data & Analytics** | **28** | data-analysis, chart-maker, sql-helper |
-| **🔗 Integrations** | **200+** | api-helper, webhook-helper, oauth-helper |
+| 分类 | 技能数 | 常用技能推荐 | 一键安装 |
+|------|--------|-------------|----------|
+| **💻 Coding & IDEs** | 1,184 | code-assistant, debug-helper | `claw install code-assistant` |
+| **🌐 Web & Frontend** | 919 | html-generator, css-helper | `claw install html-generator` |
+| **🖥️ DevOps & Cloud** | 393 | docker-helper, aws-cli | `claw install docker-helper` |
+| **🔍 Search & Research** | 345 | multi-search, web-scraper | `claw install multi-search` |
+| **🤖 Browser & Automation** | 322 | browser, playwright | `claw install browser` |
+| **📅 Productivity** | 205 | cron ⭐, reminder | `claw install cron` |
+| **🤖 AI & LLMs** | 176 | openai-chat, prompt-helper | `claw install openai-chat` |
+| **🖼️ Image & Video** | 170 | image-gen, video-maker | `claw install image-gen` |
+| **📝 Git & GitHub** | 167 | git-helper, commit-helper | `claw install git-helper` |
+| **💬 Communication** | 146 | email, slack | `claw install email` |
+| **📄 PDF & Documents** | 105 | pdf ⭐, xlsx | `claw install pdf` |
+| **📢 Marketing** | 102 | seo-helper, content-writer | `claw install seo-helper` |
+| **📱 社交媒体运营** | 82+ | xiaohongshu-skills ⭐ | `claw install xiaohongshu-skills` |
+| **🎬 Media & Streaming** | 85 | video-downloader | `claw install video-downloader` |
+| **📝 Notes & PKM** | 70 | obsidian, notion | `claw install obsidian` |
+| **🗓️ Calendar** | 65 | calendar, scheduler | `claw install calendar` |
+| **🔒 Security** | 53 | password-gen, vault-helper | `claw install password-gen` |
+| **🛒 Shopping** | 51 | price-tracker | `claw install price-tracker` |
+| **🎤 Speech** | 45 | whisper ⭐, transcription | `claw install whisper` |
+| **🍎 Apple Apps** | 44 | shortcuts, safari-helper | `claw install shortcuts` |
+| **🏠 Smart Home** | 41 | home-assistant | `claw install home-assistant` |
+| **🔄 Self-Hosted** | 33 | n8n-helper, node-red | `claw install n8n-helper` |
+| **📱 iOS/macOS Dev** | 29 | swift-helper | `claw install swift-helper` |
+| **📊 Data & Analytics** | 28 | data-analysis | `claw install data-analysis` |
+| **🔗 Integrations** | 200+ | api-helper, webhook-helper | `claw install api-helper` |
 
-**总计：5,198 个精选技能** 👉 [查看完整分类清单](./docs/skills/SKILLS-CATALOG.md)
+**总计：5,198 个精选技能** 👉 [查看完整分类清单](./SKILLS-CATALOG.md)
 
 > 💡 **技能资源指引**
 > - 📚 **学习技能编写**：查看 [`examples/`](./examples/) 目录（示例技能）
