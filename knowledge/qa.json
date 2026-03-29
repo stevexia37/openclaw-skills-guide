@@ -1,0 +1,512 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "updated": "2026-03-29",
+    "total": 50,
+    "source": "OpenClaw 社区知识库"
+  },
+  "qas": [
+    {
+      "id": 1,
+      "question": "OpenClaw 支持哪些操作系统？",
+      "answer": "OpenClaw 支持 macOS、Windows 和 Linux 三大系统。\n\n最低要求：\n- macOS 10.15 (Catalina)\n- Windows 10\n- Ubuntu 18.04\n\n推荐配置：内存 8GB，存储 2GB。",
+      "tags": [
+        "安装",
+        "系统"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 2,
+      "question": "macOS 提示「已损坏，无法打开」怎么办？",
+      "answer": "这是 macOS 安全机制导致的。\n\n解决方法：\n1. 打开终端\n2. 执行：xattr -cr /Applications/OpenClaw.app\n3. 重新打开应用\n\n如果还不行：系统偏好设置 → 隐私与安全性 → 点击「仍要打开」",
+      "tags": [
+        "安装",
+        "macOS",
+        "错误"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 3,
+      "question": "Windows 安装被杀毒软件拦截？",
+      "answer": "杀毒软件误报导致的。\n\n解决方法：\n1. 点击「更多信息」\n2. 点击「仍要运行」\n3. 或暂时关闭杀毒软件\n\nOpenClaw 是开源软件，安全可靠。",
+      "tags": [
+        "安装",
+        "Windows",
+        "杀毒"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 4,
+      "question": "配对失败怎么办？",
+      "answer": "配对失败常见原因：\n\n1. 网络问题：检查网络连接\n2. 二维码过期：重新打开应用\n3. 手机 App 未更新：更新到最新版\n4. 设备不兼容：检查系统版本\n\n尝试使用配对码方式配对。",
+      "tags": [
+        "配对",
+        "错误"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 5,
+      "question": "配对码是什么？在哪里看？",
+      "answer": "配对码是账号配对的另一种方式。\n\n位置：OpenClaw 应用屏幕上显示\n格式：如 ABCD-1234\n有效期：约 5 分钟\n\n使用方法：在手机 App 中输入配对码即可。",
+      "tags": [
+        "配对",
+        "入门"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 6,
+      "question": "什么是技能？如何安装技能？",
+      "answer": "技能是 OpenClaw 的「超能力」扩展。\n\n安装方法：\n1. 打开 https://clawhub.ai\n2. 搜索需要的技能\n3. 点击「安装」\n4. 重启 OpenClaw\n\n新手推荐：cron（定时）、pdf（文档）、xlsx（表格）",
+      "tags": [
+        "技能",
+        "安装"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 7,
+      "question": "技能安装失败怎么办？",
+      "answer": "技能安装失败原因：\n\n1. 网络问题：检查网络重试\n2. 权限不足：检查写入权限\n3. 技能不存在：确认名称正确\n4. 版本不兼容：更新 OpenClaw\n\n解决：手动下载技能文件放到 ~/.copaw/skills/",
+      "tags": [
+        "技能",
+        "错误"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 8,
+      "question": "如何设置定时提醒？",
+      "answer": "设置定时提醒很简单。\n\n示例：\n- 「每天早上9点提醒我开会」\n- 「每周五下午5点提醒我写周报」\n- 「10分钟后提醒我休息」\n\n支持：每天/每周X/X分钟后/明天+时间",
+      "tags": [
+        "定时",
+        "提醒"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 9,
+      "question": "定时提醒不生效怎么办？",
+      "answer": "提醒不生效原因：\n\n1. OpenClaw 未运行：确保后台运行\n2. 通知权限未开：检查系统通知设置\n3. 时间格式错误：用正确格式重新设置\n4. 任务被删除：重新设置提醒",
+      "tags": [
+        "定时",
+        "错误"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 10,
+      "question": "如何取消定时提醒？",
+      "answer": "取消定时提醒方法：\n\n1. 说：「取消所有提醒」\n2. 或：「取消明天的提醒」\n3. 或：「列出我的提醒」然后选择删除\n\n查看提醒：「列出我的所有提醒」",
+      "tags": [
+        "定时",
+        "提醒"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 11,
+      "question": "如何处理 PDF 文件？",
+      "answer": "OpenClaw 可以处理 PDF。\n\n需要安装 pdf 技能。\n\n常用操作：\n- 「把这个 PDF 转成文字」\n- 「提取第1-5页」\n- 「合并两个 PDF」\n- 「添加水印」",
+      "tags": [
+        "PDF",
+        "文档"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 12,
+      "question": "PDF 提取文字失败？",
+      "answer": "PDF 提取失败原因：\n\n1. PDF 是图片格式：需要 OCR 技能\n2. 文件损坏：检查 PDF 是否正常\n3. 权限问题：检查文件权限\n\n解决：安装 ocr 技能处理图片型 PDF",
+      "tags": [
+        "PDF",
+        "错误"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 13,
+      "question": "如何处理 Excel 文件？",
+      "answer": "OpenClaw 可以处理 Excel。\n\n需要安装 xlsx 技能。\n\n常用操作：\n- 「分析这个表格」\n- 「找出销售额前10」\n- 「生成图表」\n- 「导出新表格」",
+      "tags": [
+        "Excel",
+        "表格"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 14,
+      "question": "Excel 分析报错怎么办？",
+      "answer": "Excel 分析报错原因：\n\n1. 文件格式不支持：转换为 .xlsx\n2. 数据量太大：分批处理\n3. 公式错误：检查表格公式\n4. 文件损坏：检查是否能正常打开",
+      "tags": [
+        "Excel",
+        "错误"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 15,
+      "question": "如何处理 Word 文档？",
+      "answer": "OpenClaw 可以处理 Word 文档。\n\n需要安装 docx 技能。\n\n常用操作：\n- 「读取这个文档」\n- 「修改内容」\n- 「转换为 PDF」\n- 「生成新文档」",
+      "tags": [
+        "Word",
+        "文档"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 16,
+      "question": "OpenClaw 能操作浏览器吗？",
+      "answer": "是的！OpenClaw 可以操作浏览器。\n\n需要安装 browser 技能。\n\n可以：打开网页、填表、截图、抓数据、监控变化\n\n示例：「打开这个网站并截图」",
+      "tags": [
+        "浏览器",
+        "自动化"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 17,
+      "question": "浏览器操作失败怎么办？",
+      "answer": "浏览器操作失败原因：\n\n1. 网站反爬虫：有些网站禁止自动化\n2. 登录问题：先手动登录\n3. 元素找不到：检查网页结构\n4. 网络超时：增加等待时间",
+      "tags": [
+        "浏览器",
+        "错误"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 18,
+      "question": "数据会被上传吗？隐私安全吗？",
+      "answer": "OpenClaw 默认本地运行，数据不上传。\n\n隐私保护：\n- 对话数据存本地\n- 不上传云端\n- 你完全拥有数据\n\n建议：不要透露密码、银行卡等敏感信息",
+      "tags": [
+        "隐私",
+        "安全"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 19,
+      "question": "如何保护隐私数据？",
+      "answer": "保护隐私方法：\n\n1. 本地模式运行\n2. 不透露敏感信息\n3. 定期清理对话记录\n4. 设置访问权限\n5. 使用加密存储",
+      "tags": [
+        "隐私",
+        "安全"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 20,
+      "question": "支持哪些 AI 模型？",
+      "answer": "OpenClaw 支持多种模型。\n\n国际：GPT-4、Claude、Gemini\n国内：通义千问、文心一言、智谱 GLM\n本地：LLaMA、Mistral\n\n可在配置中切换。",
+      "tags": [
+        "模型",
+        "配置"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 21,
+      "question": "如何切换 AI 模型？",
+      "answer": "切换模型步骤：\n\n1. 打开配置：openclaw config\n2. 找到 model 设置\n3. 修改为想要的模型\n4. 保存配置\n5. 重启 OpenClaw\n\n某些模型需要配置 API Key。",
+      "tags": [
+        "模型",
+        "配置"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 22,
+      "question": "如何配置 API Key？",
+      "answer": "配置 API Key 方法：\n\n1. 打开配置文件：openclaw config\n2. 找到 api_keys 部分\n3. 添加你的 API Key\n4. 保存配置\n5. 重启 OpenClaw\n\nAPI Key 从各模型官网获取。",
+      "tags": [
+        "API",
+        "配置"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 23,
+      "question": "OpenClaw 和 ChatGPT 有什么区别？",
+      "answer": "主要区别：\n\n| 对比项 | ChatGPT | OpenClaw |\n|--------|---------|----------|\n| 价格 | $20/月 | 免费 |\n| 数据 | 云端 | 本地 |\n| 操作电脑 | 不能 | 可以 |\n| 翻墙 | 需要 | 不需要 |\n| 技能 | 有限 | 30000+ |",
+      "tags": [
+        "对比",
+        "ChatGPT"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 24,
+      "question": "OpenClaw 免费吗？",
+      "answer": "是的，OpenClaw 完全免费！\n\n- 无订阅费\n- 无使用限制\n- 开源项目\n\n注意：某些 AI 模型需要付费 API Key。\n建议使用免费模型或国内模型。",
+      "tags": [
+        "价格",
+        "免费"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 25,
+      "question": "需要翻墙吗？",
+      "answer": "不需要！\n\nOpenClaw 支持国内模型：\n- 通义千问\n- 文心一言\n- 智谱 GLM\n\n这些在中国可直接使用。\n使用 GPT-4 等国际模型才可能需要翻墙。",
+      "tags": [
+        "翻墙",
+        "网络"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 26,
+      "question": "下载速度慢怎么办？",
+      "answer": "下载慢解决方法：\n\n1. 换时间段下载\n2. 使用下载工具（IDM）\n3. 找镜像链接\n4. 使用国内 CDN\n\n或从国内镜像站下载。",
+      "tags": [
+        "下载",
+        "网络"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 27,
+      "question": "运行缓慢怎么办？",
+      "answer": "运行慢解决方法：\n\n1. 切换更快模型（国内模型）\n2. 关闭其他应用\n3. 清理对话历史\n4. 更新到最新版本\n5. 检查网络连接\n6. 减少已安装技能数",
+      "tags": [
+        "性能",
+        "优化"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 28,
+      "question": "内存占用高怎么办？",
+      "answer": "内存高解决方法：\n\n1. 关闭不用的技能\n2. 清理对话记录\n3. 使用轻量模型\n4. 定期重启 OpenClaw\n5. 检查是否有异常进程",
+      "tags": [
+        "性能",
+        "内存"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 29,
+      "question": "如何更新 OpenClaw？",
+      "answer": "更新方法：\n\n自动更新：启动时自动检查\n手动更新：openclaw update\n或重新下载安装\n\n查看版本：openclaw --version",
+      "tags": [
+        "更新",
+        "维护"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 30,
+      "question": "如何备份数据？",
+      "answer": "备份数据方法：\n\n数据位置：\n- macOS/Linux: ~/.copaw/\n- Windows: C:\\Users\\用户\\.copaw\\\n\n备份：复制整个目录到安全位置\n恢复：复制回原位置",
+      "tags": [
+        "备份",
+        "数据"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 31,
+      "question": "如何恢复数据？",
+      "answer": "恢复数据方法：\n\n1. 找到备份目录\n2. 复制到 ~/.copaw/\n3. 重启 OpenClaw\n\n确保备份完整，包括配置和对话记录。",
+      "tags": [
+        "备份",
+        "恢复"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 32,
+      "question": "如何卸载 OpenClaw？",
+      "answer": "卸载方法：\n\nmacOS：拖拽到废纸篓\nWindows：控制面板卸载\nLinux：删除 AppImage\n\n清理数据：删除 ~/.copaw/（可选）",
+      "tags": [
+        "卸载",
+        "清理"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 33,
+      "question": "卸载后数据会删除吗？",
+      "answer": "卸载不会删除数据。\n\n数据位置：~/.copaw/\n\n如需清理：手动删除 ~/.copaw/ 目录\n\n建议卸载前先备份数据。",
+      "tags": [
+        "卸载",
+        "数据"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 34,
+      "question": "如何开发自己的技能？",
+      "answer": "开发技能步骤：\n\n1. 创建技能文件夹：my-skill/SKILL.md\n2. 编写 SKILL.md：功能、用法、配置\n3. 添加脚本（可选）\n4. 测试技能\n5. 发布到 ClawHub 或 GitHub\n\n详细教程见 docs/05-advanced/",
+      "tags": [
+        "技能",
+        "开发"
+      ],
+      "difficulty": "进阶"
+    },
+    {
+      "id": 35,
+      "question": "技能开发需要什么技术？",
+      "answer": "技能开发技能要求：\n\n基础：Markdown 编写\n进阶：Python/JavaScript\n高级：API 集成、文件操作\n\n简单技能只需编写 SKILL.md\n复杂技能需要脚本支持",
+      "tags": [
+        "技能",
+        "开发"
+      ],
+      "difficulty": "进阶"
+    },
+    {
+      "id": 36,
+      "question": "如何发布技能？",
+      "answer": "发布技能方法：\n\n1. 完善技能文档\n2. 测试功能正常\n3. 上传到 ClawHub\n4. 或发布到 GitHub\n\nClawHub 提交：https://clawhub.ai/submit",
+      "tags": [
+        "技能",
+        "发布"
+      ],
+      "difficulty": "进阶"
+    },
+    {
+      "id": 37,
+      "question": "有哪些推荐技能？",
+      "answer": "推荐技能列表：\n\n新手必备：\n- cron（定时提醒）\n- pdf（文档处理）\n- xlsx（表格处理）\n\n开发者推荐：\n- code-snippets（代码片段）\n- json-tools（JSON工具）\n\n办公推荐：\n- docx（Word处理）\n- email（邮件助手）",
+      "tags": [
+        "技能",
+        "推荐"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 38,
+      "question": "如何使用问答工具？",
+      "answer": "问答工具使用方法：\n\n下载：从 Releases 页面下载\n运行：双击或命令行运行\n\n交互模式：直接输入问题\n命令模式：\n- --list 列出所有问题\n- --search 关键词搜索\n- --topic 查看主题",
+      "tags": [
+        "工具",
+        "问答"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 39,
+      "question": "问答工具下载不了？",
+      "answer": "下载问题解决：\n\n1. 检查 Releases 页面\n2. 确认文件存在\n3. 换浏览器下载\n4. 使用 curl/wget 下载\n\n如有问题，直接阅读知识库文件。",
+      "tags": [
+        "工具",
+        "下载"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 40,
+      "question": "问答工具运行报错？",
+      "answer": "问答工具报错解决：\n\nmacOS/Linux：\n- chmod +x qa_tool\n- 确保 knowledge 目录存在\n\nWindows：\n- 检查杀毒软件\n- 确保 knowledge 目录存在\n\n错误反馈：提交 GitHub Issue",
+      "tags": [
+        "工具",
+        "错误"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 41,
+      "question": "如何提问效果更好？",
+      "answer": "提问技巧：\n\n公式：目标 + 动作 + 细节\n\n好例子：\n- 「分析表格，找出销售额前10」\n- 「每天9点提醒开会」\n\n坏例子：\n- 「弄一下」\n- 「看看这个」",
+      "tags": [
+        "技巧",
+        "提问"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 42,
+      "question": "OpenClaw 能记住对话吗？",
+      "answer": "是的！OpenClaw 有上下文记忆。\n\n可以：\n- 在之前基础上继续\n- 用「继续」「加上」等词\n- 不需要重复说明\n\n对话历史保存在本地。",
+      "tags": [
+        "功能",
+        "对话"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 43,
+      "question": "如何清理对话历史？",
+      "answer": "清理对话方法：\n\n1. 在对话中说：「清理历史」\n2. 或手动删除对话文件\n\n位置：~/.copaw/dialog/\n\n建议定期清理节省空间。",
+      "tags": [
+        "维护",
+        "清理"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 44,
+      "question": "对话历史可以导出吗？",
+      "answer": "可以导出对话历史。\n\n方法：\n- 「导出今天的对话」\n- 或手动复制对话文件\n\n位置：~/.copaw/dialog/\n\n可导出为 txt、md 等格式。",
+      "tags": [
+        "导出",
+        "对话"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 45,
+      "question": "如何检查 OpenClaw 健康状态？",
+      "answer": "健康检查方法：\n\n命令：openclaw doctor\n或运行 health_check.sh\n\n检查内容：\n- 是否安装\n- 是否运行\n- 数据目录\n- 配置文件\n- 技能状态",
+      "tags": [
+        "检查",
+        "健康"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 46,
+      "question": "OpenClaw 启动失败怎么办？",
+      "answer": "启动失败原因：\n\n1. 配置错误：检查配置文件\n2. 权限不足：检查运行权限\n3. 端口冲突：检查端口占用\n4. 依赖缺失：重新安装\n\n运行 openclaw doctor 查详情",
+      "tags": [
+        "启动",
+        "错误"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 47,
+      "question": "如何查看日志？",
+      "answer": "查看日志方法：\n\n位置：~/.copaw/copaw.log\n命令：openclaw logs\n\n可查看：\n- 运行状态\n- 错误信息\n- 操作记录",
+      "tags": [
+        "日志",
+        "调试"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 48,
+      "question": "遇到问题如何求助？",
+      "answer": "求助渠道：\n\n1. 使用问答工具搜索\n2. 查看 docs/ 目录教程\n3. GitHub Issues 提问\n4. 官方支持：https://openclaw.ai\n5. ClawHub 社区",
+      "tags": [
+        "求助",
+        "支持"
+      ],
+      "difficulty": "简单"
+    },
+    {
+      "id": 49,
+      "question": "如何贡献问题和答案？",
+      "answer": "贡献方法：\n\n1. 编辑 knowledge/faq.jsonl\n2. 添加新问题（按格式）\n3. 更新 topics.json\n4. 提交 PR\n\n详见 CONTRIBUTING.md",
+      "tags": [
+        "贡献",
+        "社区"
+      ],
+      "difficulty": "中等"
+    },
+    {
+      "id": 50,
+      "question": "M1/M2 Mac 下载哪个版本？",
+      "answer": "Apple Silicon Mac 选择 ARM 版本！\n\n文件名通常包含：\n- arm64\n- apple-silicon\n- aarch64\n\n不要下载 Intel (x86) 版本！",
+      "tags": [
+        "安装",
+        "macOS"
+      ],
+      "difficulty": "简单"
+    }
+  ]
+}

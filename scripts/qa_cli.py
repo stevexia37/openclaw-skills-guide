@@ -4,16 +4,25 @@ OpenClaw 问答工具 - 命令行版本
 ================================
 
 一个简单的问答工具，帮助用户快速找到解决方案。
-无需安装 Python 环境即可使用（打包后）。
 
 使用方法：
-  python qa_cli.py              # 进入交互模式
+  # 方式一：交互模式
+  python qa_cli.py
+  
+  # 方式二：直接提问（一键运行）
+  python qa_cli.py "安装时提示已损坏怎么办"
+  
+  # 方式三：curl 一键运行（无需下载）
+  curl -s https://raw.githubusercontent.com/stevexia37/openclaw-skills-guide/main/scripts/qa_cli.py | python3 - "你的问题"
+  
+  # 其他命令
   python qa_cli.py --list       # 列出所有问题
-  python qa_cli.py --search 关键词  # 直接搜索
+  python qa_cli.py --search 关键词  # 搜索问题
   python qa_cli.py --topic 主题     # 查看某主题下的问题
 
 作者: stevexia37
-版本: 1.0.0
+版本: 2.0.0
+更新: 2026-03-29
 """
 
 import json
@@ -27,7 +36,8 @@ from pathlib import Path
 # 知识库文件路径（相对于脚本位置）
 SCRIPT_DIR = Path(__file__).parent.absolute()
 KB_DIR = SCRIPT_DIR.parent / "knowledge"
-FAQ_FILE = KB_DIR / "faq.jsonl"
+QA_FILE = KB_DIR / "qa.json"  # 新的 qa.json 格式
+FAQ_FILE = KB_DIR / "faq.jsonl"  # 兼容旧的 faq.jsonl
 TOPICS_FILE = KB_DIR / "topics.json"
 
 # 匹配阈值（低于此值视为无匹配）
@@ -35,29 +45,45 @@ MATCH_THRESHOLD = 0.1
 
 # ==================== 数据加载 ====================
 
-def load_faq():
+def load_qa():
     """
-    加载 FAQ 知识库
+    加载问答知识库
+    
+    优先读取 qa.json，兼容 faq.jsonl
     
     返回: 问题列表，每个元素是一个字典
     """
-    faq_list = []
+    qa_list = []
     
-    if not FAQ_FILE.exists():
-        print(f"⚠️ 知识库文件不存在: {FAQ_FILE}")
-        return faq_list
+    # 优先读取 qa.json
+    if QA_FILE.exists():
+        with open(QA_FILE, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            qa_list = data.get('qas', [])
+            if qa_list:
+                print(f"✅ 已加载 qa.json，共 {len(qa_list)} 条问答", file=sys.stderr)
+                return qa_list
     
-    with open(FAQ_FILE, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                try:
-                    item = json.loads(line)
-                    faq_list.append(item)
-                except json.JSONDecodeError:
-                    continue
+    # 兼容 faq.jsonl
+    if FAQ_FILE.exists():
+        with open(FAQ_FILE, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    try:
+                        item = json.loads(line)
+                        # 转换 id 格式
+                        if 'id' in item and isinstance(item['id'], str):
+                            item['id'] = int(item['id'].replace('q', ''))
+                        qa_list.append(item)
+                    except json.JSONDecodeError:
+                        continue
+        if qa_list:
+            print(f"✅ 已加载 faq.jsonl，共 {len(qa_list)} 条问答", file=sys.stderr)
+            return qa_list
     
-    return faq_list
+    print(f"⚠️ 知识库文件不存在", file=sys.stderr)
+    return qa_list
 
 def load_topics():
     """
@@ -66,7 +92,6 @@ def load_topics():
     返回: 主题字典 {主题名: [问题ID列表]}
     """
     if not TOPICS_FILE.exists():
-        print(f"⚠️ 主题文件不存在: {TOPICS_FILE}")
         return {}
     
     with open(TOPICS_FILE, 'r', encoding='utf-8') as f:
@@ -120,20 +145,20 @@ def calculate_match_score(query, question, tags):
     
     return min(base_score + tag_score, 1.0)
 
-def search_faq(query, faq_list, top_n=3):
+def search_qa(query, qa_list, top_n=3):
     """
-    搜索 FAQ，返回最相关的结果
+    搜索问答，返回最相关的结果
     
     参数:
         query - 用户输入
-        faq_list - FAQ 列表
+        qa_list - 问答列表
         top_n - 返回结果数量
     
     返回: 匹配结果列表 [(分数, 问题项)]
     """
     results = []
     
-    for item in faq_list:
+    for item in qa_list:
         score = calculate_match_score(
             query,
             item.get('question', ''),
@@ -150,14 +175,20 @@ def search_faq(query, faq_list, top_n=3):
 
 # ==================== 显示输出 ====================
 
-def print_answer(item, score=None):
+def print_answer(item, score=None, brief=False):
     """
     打印单个问题的答案
     
     参数:
         item - 问题项
         score - 匹配分数（可选）
+        brief - 简洁模式（只输出答案）
     """
+    if brief:
+        # 简洁模式：直接输出答案，适合 curl 一键运行
+        print(item.get('answer', ''))
+        return
+    
     print("\n" + "=" * 50)
     
     if score:
@@ -171,39 +202,44 @@ def print_answer(item, score=None):
     if tags:
         print(f"\n🏷️ 标签: {', '.join(tags)}")
     
+    difficulty = item.get('difficulty', '')
+    if difficulty:
+        print(f"📈 难度: {difficulty}")
+    
     print("=" * 50)
 
-def print_all_questions(faq_list):
+def print_all_questions(qa_list):
     """
     列出所有问题
     
-    参数: faq_list - FAQ 列表
+    参数: qa_list - 问答列表
     """
     print("\n📚 所有问题列表:")
     print("=" * 50)
     
-    for i, item in enumerate(faq_list, 1):
-        print(f"{i}. [{item.get('id', '')}] {item.get('question', '')}")
+    for i, item in enumerate(qa_list, 1):
+        qid = item.get('id', i)
+        print(f"{i}. [{qid}] {item.get('question', '')}")
         tags = item.get('tags', [])
         if tags:
             print(f"   🏷️ {', '.join(tags)}")
     
     print("=" * 50)
-    print(f"共 {len(faq_list)} 个问题")
+    print(f"共 {len(qa_list)} 个问题")
 
-def print_topics(topics, faq_list):
+def print_topics(topics, qa_list):
     """
     显示主题索引
     
     参数:
         topics - 主题字典
-        faq_list - FAQ 列表
+        qa_list - 问答列表
     """
     print("\n📂 主题分类:")
     print("=" * 50)
     
     # 创建 ID 到问题的映射
-    id_to_question = {item.get('id'): item for item in faq_list}
+    id_to_question = {item.get('id'): item for item in qa_list}
     
     for topic, ids in topics.items():
         print(f"\n【{topic}】")
@@ -216,16 +252,16 @@ def print_topics(topics, faq_list):
 
 # ==================== 交互模式 ====================
 
-def interactive_mode(faq_list, topics):
+def interactive_mode(qa_list, topics):
     """
     交互式问答模式
     
     参数:
-        faq_list - FAQ 列表
+        qa_list - 问答列表
         topics - 主题字典
     """
     print("\n" + "=" * 50)
-    print("🦞 OpenClaw 问答工具 v1.0.0")
+    print("🦞 OpenClaw 问答工具 v2.0.0")
     print("=" * 50)
     print("输入你的问题，我来帮你找答案！")
     print("- 输入 'list' 查看所有问题")
@@ -247,11 +283,11 @@ def interactive_mode(faq_list, topics):
             break
         
         if query.lower() == 'list':
-            print_all_questions(faq_list)
+            print_all_questions(qa_list)
             continue
         
         if query.lower() == 'topics':
-            print_topics(topics, faq_list)
+            print_topics(topics, qa_list)
             continue
         
         if not query:
@@ -259,7 +295,7 @@ def interactive_mode(faq_list, topics):
             continue
         
         # 搜索问题
-        results = search_faq(query, faq_list)
+        results = search_qa(query, qa_list)
         
         if results:
             print(f"\n找到 {len(results)} 个相关问题:")
@@ -277,14 +313,17 @@ def interactive_mode(faq_list, topics):
 def print_help():
     """打印帮助信息"""
     print(__doc__)
+    print("\n更多帮助:")
+    print("  - GitHub: https://github.com/stevexia37/openclaw-skills-guide")
+    print("  - 文档: docs/ 目录")
 
 def main():
     """主函数"""
     # 加载知识库
-    faq_list = load_faq()
+    qa_list = load_qa()
     topics = load_topics()
     
-    if not faq_list:
+    if not qa_list:
         print("❌ 无法加载知识库，请检查文件是否存在")
         sys.exit(1)
     
@@ -293,13 +332,13 @@ def main():
     
     if not args:
         # 无参数，进入交互模式
-        interactive_mode(faq_list, topics)
+        interactive_mode(qa_list, topics)
     
     elif args[0] == '--help' or args[0] == '-h':
         print_help()
     
     elif args[0] == '--list':
-        print_all_questions(faq_list)
+        print_all_questions(qa_list)
     
     elif args[0] == '--search':
         if len(args) < 2:
@@ -308,7 +347,7 @@ def main():
             sys.exit(1)
         
         query = args[1]
-        results = search_faq(query, faq_list)
+        results = search_qa(query, qa_list)
         
         if results:
             print(f"搜索 '{query}' 找到 {len(results)} 个结果:")
@@ -332,7 +371,7 @@ def main():
             sys.exit(1)
         
         # 创建 ID 到问题的映射
-        id_to_question = {item.get('id'): item for item in faq_list}
+        id_to_question = {item.get('id'): item for item in qa_list}
         
         print(f"\n【{topic_name}】相关问题:")
         for qid in topics[topic_name]:
@@ -340,17 +379,33 @@ def main():
             if item:
                 print_answer(item)
     
+    elif args[0].startswith('--'):
+        # 其他未知命令
+        print(f"未知命令: {args[0]}")
+        print("使用 --help 查看帮助")
+        sys.exit(1)
+    
     else:
-        # 将所有参数作为搜索词
+        # 将所有参数作为搜索词（支持直接提问）
         query = ' '.join(args)
-        results = search_faq(query, faq_list)
+        results = search_qa(query, qa_list)
         
         if results:
-            print(f"找到 {len(results)} 个相关问题:")
-            for score, item in results:
-                print_answer(item, score)
+            # 检测是否在 curl 一键模式（stdin 有数据但不是交互式）
+            brief_mode = not sys.stdin.isatty()
+            
+            if brief_mode:
+                # 简洁模式：只输出最佳答案
+                print_answer(results[0][1], brief=True)
+            else:
+                print(f"找到 {len(results)} 个相关问题:")
+                for score, item in results:
+                    print_answer(item, score)
         else:
-            print("未找到相关问题，尝试输入 --help 查看用法")
+            print("⚠️ 未找到相关问题")
+            print("建议:")
+            print("  1. 查看所有问题: python qa_cli.py --list")
+            print("  2. 查看帮助: python qa_cli.py --help")
 
 if __name__ == '__main__':
     main()
