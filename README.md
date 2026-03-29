@@ -77,13 +77,31 @@
 
 > 适合：遇到具体问题想快速解决
 
-**立即下载** 👉 [Releases 页面](https://github.com/stevexia37/openclaw-skills-guide/releases)
+**一键运行（无需下载）：**
+
+```bash
+curl -s https://raw.githubusercontent.com/stevexia37/openclaw-skills-guide/main/scripts/qa_cli.py | python3 - "安装时提示已损坏怎么办"
+```
+
+**或下载到本地使用：**
+
+```bash
+# 下载问答工具
+git clone https://github.com/stevexia37/openclaw-skills-guide.git
+cd openclaw-skills-guide
+
+# 直接提问
+python scripts/qa_cli.py "你的问题"
+
+# 或进入交互模式
+python scripts/qa_cli.py
+```
 
 **使用演示：**
 
 ```
 ┌─────────────────────────────────────┐
-│  🦞 OpenClaw 问答工具 v1.0.0        │
+│  🦞 OpenClaw 问答工具 v2.0.0        │
 ├─────────────────────────────────────┤
 │  请输入问题:                        │
 │  > 安装时提示已损坏怎么办            │
@@ -117,6 +135,11 @@
 | 如何安装技能？ | [查看答案](#q006) |
 | 如何设置定时提醒？ | [查看答案](#q008) |
 | OpenClaw 和 ChatGPT 有什么区别？ | [查看答案](#q023) |
+
+> 💡 **在线搜索提示**
+> - 🏷️ 通过 [GitHub Issues 标签](https://github.com/stevexia37/openclaw-skills-guide/issues?q=is%3Aissue+label%3Aquestion) 搜索问题
+> - 📖 在 [ Discussions ](https://github.com/stevexia37/openclaw-skills-guide/discussions) 提问和讨论
+> - 🔍 使用 GitHub 搜索框搜索关键词
 
 ---
 
