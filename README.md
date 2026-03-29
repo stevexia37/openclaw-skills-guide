@@ -319,6 +319,10 @@
 
 **总计：5,198 个精选技能** 👉 [查看完整分类清单](./docs/skills/SKILLS-CATALOG.md)
 
+> 💡 **技能资源指引**
+> - 📚 **学习技能编写**：查看 [`examples/`](./examples/) 目录（示例技能）
+> - 🔧 **安装完整技能**：访问 [ClawHub 技能市场](https://clawhub.ai/skills) 或 [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)
+
 ---
 
 ## 📞 求助渠道
