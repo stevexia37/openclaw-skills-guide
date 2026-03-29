@@ -396,6 +396,21 @@ python scripts/qa_cli.py
 
 ---
 
+## 🙋 求助渠道
+
+遇到问题？试试这些渠道：
+
+| 渠道 | 适用场景 | 链接 |
+|------|----------|------|
+| **Discussions** ⭐ | 提问、讨论、建议 | [参与讨论](https://github.com/stevexia37/openclaw-skills-guide/discussions) |
+| **问答工具** | 快速查找答案 | `curl | python3 - "问题"` |
+| **Issues** | 报告 Bug、请求功能 | [提交 Issue](https://github.com/stevexia37/openclaw-skills-guide/issues) |
+| **知识库** | 浏览所有问答 | [查看知识库](./knowledge/qa.json) |
+
+> 💡 **推荐**：优先在 [Discussions](https://github.com/stevexia37/openclaw-skills-guide/discussions) 提问，高频问题会被转为知识库条目。
+
+---
+
 ## ⭐ 给个 Star！
 
 如果觉得有用，请点击右上角 **⭐ Star**
