@@ -4,6 +4,26 @@
 
 ---
 
+## ⭐ 新结构导航（推荐）
+
+**新结构入口**: [new-structure/](./new-structure/)
+
+| 目录 | 内容 |
+|------|------|
+| [install/](./new-structure/install/) | 安装配置 |
+| [start/](./new-structure/start/) | 快速开始 |
+| [channels/](./new-structure/channels/) | 渠道配置 |
+| [skills/](./new-structure/skills/) | 技能指南 |
+| [concepts/](./new-structure/concepts/) | 核心概念 |
+| [tools/](./new-structure/tools/) | 工具命令 |
+| [appendix/](./new-structure/appendix/) | 附录 |
+
+---
+
+## 🎯 学习路径（推荐顺序）
+
+---
+
 ## 🎯 学习路径（推荐顺序）
 
 | 步骤 | 主题 | 文档 | 预计时间 |
