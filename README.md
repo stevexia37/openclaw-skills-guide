@@ -61,13 +61,31 @@
 
 ---
 
+## ⭐ 新版文档入口（推荐）
+
+> 结构清晰、内容整合、小白友好
+
+**新版入口** 👉 [docs/new-structure/](./docs/new-structure/)
+
+| 目录 | 内容 |
+|------|------|
+| [install/](./docs/new-structure/install/) | 安装配置（5分钟搞定） |
+| [start/](./docs/new-structure/start/) | 快速开始（10分钟上手） |
+| [channels/](./docs/new-structure/channels/) | 渠道配置（飞书/Telegram/钉钉） |
+| [skills/](./docs/new-structure/skills/) | 技能指南（49,035技能） |
+| [concepts/](./docs/new-structure/concepts/) | 核心概念（梦境系统⭐新功能） |
+| [tools/](./docs/new-structure/tools/) | 工具命令速查 |
+| [appendix/](./docs/new-structure/appendix/) | 附录（FAQ/评价/视频） |
+
+---
+
 ## 🎯 三种使用方式，总有一种适合你
 
 ### 📖 方式一：阅读教程（推荐新手）
 
 > 适合：想系统学习 OpenClaw
 
-**从这里开始** 👉 [环境准备](./docs/0-1/01-env-prepare.md)
+**新版入口** 👉 [docs/new-structure/start/](./docs/new-structure/start/)
 
 **学习路径** 👉 [完整路线图](./LEARNING-PATH.md)
 
