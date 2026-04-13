@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Check Markdown links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          check-modified-files-only: 'yes'
+          base-branch: 'main'
+      
+      - name: Validate JSON files
+        run: |
+          for f in knowledge/*.jsonl; do
+            while IFS= read -r line; do
+              echo "$line" | python3 -c "import sys,json; json.load(sys.stdin)" || { echo "❌ Invalid JSON in $f"; exit 1; }
+            done < "$f"
+          done
+          echo "✅ All JSONL files valid"
